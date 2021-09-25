@@ -1,0 +1,51 @@
+{
+  "name": "doox911opensource/laravel-odata",
+  "description": "Laravel odata",
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Polyakov Andrey",
+      "email": "doox911@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Doox911Opensource\\LaravelOData\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Doox911Opensource\\LaravelOData\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "doox911-opensource/laravel-value-objects": "dev-main",
+    "guzzlehttp/guzzle": "^7.0",
+    "myclabs/php-enum": "^1.8",
+    "webmozart/assert": "^1.10"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Doox911Opensource\\LaravelOData\\Providers\\LaravelODataServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "orchestra/testbench": "^6.17",
+    "jetbrains/phpstorm-attributes": "^1.0"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/doox911-opensource/laravel-value-objects.git"
+    }
+  ]
+}

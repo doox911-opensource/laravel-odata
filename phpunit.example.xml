@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+  backupStaticAttributes="false"
+  bootstrap="./vendor/autoload.php"
+  colors="true"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+  processIsolation="false"
+  stopOnFailure="false"
+>
+  <testsuites>
+    <testsuite name="Tests">
+      <directory suffix="Test.php">./tests</directory>
+    </testsuite>
+  </testsuites>
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">src/</directory>
+    </include>
+  </coverage>
+  <php>
+    <env name="ODATA_AUTH_LOGIN" value="login"/>
+    <env name="ODATA_AUTH_PASSWORD" value="secret"/>
+    <env name="ODATA_TEST_CLIENT_BASE_URL" value="https://services.odata.org/V3/(S(atwmlvm4mo23p20k53tu0fjr))/OData/OData.svc/"/>
+    <env name="ODATA_TEST_QUERY_BUILDER_BASE_URL" value="https://services.odata.org/V3/(S(atwmlvm4mo23p20k53tu0fjr))/OData/OData.svc/"/>
+  </php>
+</phpunit>
